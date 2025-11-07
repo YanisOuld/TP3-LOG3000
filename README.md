@@ -37,3 +37,36 @@ Provide a simple, one-page calculator you can run locally to perform quick arith
    ```
 5. Open your browser to http://127.0.0.1:5000 to use the calculator interface.
 
+## Project Structure
+- `app.py`: Flask application entry point and request handling.
+- `operators.py`: Arithmetic helper functions used by the backend (documented with current behavior; logical issues will be addressed in later assignments).
+- `templates/`: HTML templates rendered by Flask (`index.html` hosts the calculator UI).
+- `static/`: Static assets such as CSS (`style.css` styles the calculator page).
+- `requirements.txt`: Python dependencies required for local execution.
+
+## Usage
+1. Start the development server as described above.
+2. Enter a simple expression using two operands and one operator in the on-screen calculator (e.g., `8 / 2`).
+3. Press `=` to submit the expression; the result (or an error message) appears in the display field.
+4. Use `C` to clear the display and type a new expression.
+
+## Testing
+- Planned tool: `pytest`
+- Test layout: future tests will live under a `tests/` directory with descriptive module-level documentation.
+- To prepare your environment ahead of time, install pytest alongside Flask:
+  ```bash
+  pip install -r requirements.txt
+  pip install pytest
+  ```
+- Once test suites are added, they will be executed with:
+  ```bash
+  pytest
+  ```
+
+## Contribution Workflow
+- **Branches:** create a feature branch per issue (e.g., `feature/docs-update`, `fix/bug-xyz`).
+- **Commits:** prefer small, descriptive commit messages that explain *why* a change was made.
+- **Pull Requests:** open a PR for each branch, link related GitHub issues, and request at least one teammate for review.
+- **Issues:** document each discovered bug or enhancement with reproduction steps, expected behavior, and assignee.
+- **Coding Standards:** keep documentation up to date, preserve existing behavior unless an issue explicitly states otherwise, and run the relevant tests (pytest once available) before requesting review.
+

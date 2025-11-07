@@ -11,6 +11,17 @@ OPS = {
 }
 
 def calculate(expr: str):
+    """Evaluate the expression typed in the calculator display.
+
+    Parameters:
+        expr (str): Raw string submitted by the client (e.g., "3+4").
+
+    Returns:
+        float: Numeric result produced by the mapped operator.
+
+    Raises:
+        ValueError: Raised when the expression is empty, malformed, or operands are invalid.
+    """
     if not expr or not isinstance(expr, str):
         raise ValueError("empty expression")
 
@@ -43,6 +54,7 @@ def calculate(expr: str):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    """Serve the calculator interface and return results to the client."""
     result = ""
     if request.method == 'POST':
         expression = request.form.get('display', '')
