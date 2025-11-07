@@ -51,16 +51,15 @@ Provide a simple, one-page calculator you can run locally to perform quick arith
 4. Use `C` to clear the display and type a new expression.
 
 ## Testing
-- Planned tool: `pytest`
-- Test layout: future tests will live under a `tests/` directory with descriptive module-level documentation.
-- To prepare your environment ahead of time, install pytest alongside Flask:
+- Test runner: `pytest`
+- Layout: see the `tests/` directory (`test_app.py`, `test_operators.py`, and their README).
+- Install the toolchain:
   ```bash
   pip install -r requirements.txt
-  pip install pytest
   ```
-- Once test suites are added, they will be executed with:
+- Execute the suite from the project root:
   ```bash
-  pytest
+  py -m pytest
   ```
 
 ## Contribution Workflow
