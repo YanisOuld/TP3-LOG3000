@@ -51,4 +51,4 @@ def divide(a, b):
         float: Quotient surfaced back to the UI.
     """
 
-    return a // b
+    return a / b
